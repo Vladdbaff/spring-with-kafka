@@ -10,19 +10,19 @@ import org.springframework.messaging.handler.annotation.SendTo;
 
 import org.springframework.stereotype.Service;
 
-@Service
-@EnableBinding(Processor.class)
-@MessageEndpoint
-public class CheckBookService {
-
-    @Autowired
-    private Processor processor;
-
-    @StreamListener(Processor.INPUT)
-    @SendTo(Processor.OUTPUT)
-    public Book checkBook(Book book) {
-        book.setStatus("checked");
-        System.out.println(book);
-        return book;
-    }
-}
+//@Service
+//@EnableBinding(Processor.class)
+//@MessageEndpoint
+//public class CheckBookService {
+//
+//    @Autowired
+//    private Processor processor;
+//
+//    @StreamListener(Processor.INPUT)
+//    @SendTo(Processor.OUTPUT)
+//    public Book checkBook(Book book) {
+//        book.setStatus("checked");
+//        System.out.println(book);
+//        return book;
+//    }
+//}
